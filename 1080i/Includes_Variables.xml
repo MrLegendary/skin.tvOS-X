@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<variable name="HomeBG">
+        <value condition="!IsEmpty(Skin.String(CustomBgHome)) + !Window.IsActive(DialogVideoInfo.xml)">$INFO[Skin.String(CustomBgHome)]</value>	
+        <value>backgrounds/HomeBG.png</value>
+    </variable>	
+	
+    <variable name="OtherBG">
+        <value condition="!IsEmpty(Skin.String(CustomBgOther)) + !Window.IsActive(DialogVideoInfo.xml)">$INFO[Skin.String(CustomBgOther)]</value>
+		<value condition="!IsEmpty(Skin.String(CustomBgHome)) + IsEmpty(Skin.String(CustomBgOther)) ">$INFO[Skin.String(CustomBgHome)]</value>
+        <value>backgrounds/OtherBG.png</value>
+    </variable>
+	
+    <variable name="QuitLabel" description="Label for skin settings Quit function item">
+        <value condition="StringCompare(Skin.String(shutdown),quit)">$LOCALIZE[13009]</value>
+        <value condition="StringCompare(Skin.String(shutdown),powerdown)">$LOCALIZE[13005]</value>
+        <value condition="StringCompare(Skin.String(shutdown),hibernate)">$LOCALIZE[13010]</value>
+        <value condition="StringCompare(Skin.String(shutdown),suspend)">$LOCALIZE[13011]</value>
+        <value condition="StringCompare(Skin.String(shutdown),reboot)">$LOCALIZE[13013]</value>
+		<value>$LOCALIZE[351]</value>
+    </variable>
+	
+    <variable name="QuitLabelStatus" description="Label for skin settings Quit function item">
+        <value condition="StringCompare(Skin.String(shutdown),quit)">$LOCALIZE[13009]</value>
+        <value condition="StringCompare(Skin.String(shutdown),powerdown)">$LOCALIZE[13005]</value>
+        <value condition="StringCompare(Skin.String(shutdown),hibernate)">$LOCALIZE[13010]</value>
+        <value condition="StringCompare(Skin.String(shutdown),suspend)">$LOCALIZE[13011]</value>
+        <value condition="StringCompare(Skin.String(shutdown),reboot)">$LOCALIZE[13013]</value>
+		<value>$LOCALIZE[33061]</value>
+    </variable>	
+	<variable name="SeekOffset">
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),05:00:00)">5h</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),04:30:00)">4.5h</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),04:00:00)">4h</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),03:30:00)">3.5h</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),03:00:00)">3h</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),02:30:00)">2.5h</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),02:00:00)">2h</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),01:30:00)">1.5h</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),01:00:00)">1h</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:59:00)">59m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:58:00)">58m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:57:00)">57m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:56:00)">56m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:55:00)">55m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:54:00)">54m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:53:00)">53m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:52:00)">52m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:51:00)">51m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:50:00)">50m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:49:00)">49m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:48:00)">48m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:47:00)">47m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:46:00)">46m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:45:00)">45m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:44:00)">44m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:43:00)">43m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:42:00)">42m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:41:00)">41m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:40:00)">40m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:39:00)">39m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:38:00)">38m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:37:00)">37m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:36:00)">36m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:35:00)">35m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:34:00)">34m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:33:00)">33m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:32:00)">32m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:31:00)">31m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:30:00)">30m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:29:00)">29m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:28:00)">28m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:27:00)">27m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:26:00)">26m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:25:00)">25m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:24:00)">24m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:23:00)">23m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:22:00)">22m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:21:00)">21m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:20:00)">20m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:19:00)">19m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:18:00)">18m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:17:00)">17m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:16:00)">16m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:15:00)">15m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:14:00)">14m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:13:00)">13m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:12:00)">12m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:11:00)">11m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:10:00)">10m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:09:00)">9m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:08:00)">8m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:07:00)">7m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:06:00)">6m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:05:00)">5m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:04:00)">4m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:03:00)">3m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:02:00)">2m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:01:00)">1m</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:59)">59s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:58)">58s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:57)">57s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:56)">56s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:55)">55s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:54)">54s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:53)">53s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:52)">52s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:51)">51s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:50)">50s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:49)">49s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:48)">48s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:47)">47s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:46)">46s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:45)">45s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:44)">44s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:43)">43s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:42)">42s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:41)">41s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:40)">40s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:39)">39s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:38)">38s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:37)">37s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:36)">36s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:35)">35s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:34)">34s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:33)">33s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:32)">32s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:31)">31s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:30)">30s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:29)">29s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:28)">28s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:27)">27s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:26)">26s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:25)">25s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:24)">24s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:23)">23s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:22)">22s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:21)">21s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:20)">20s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:19)">19s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:18)">18s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:17)">17s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:16)">16s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:15)">15s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:14)">14s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:13)">13s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:12)">12s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:11)">11s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:10)">10s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:09)">9s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:08)">8s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:07)">7s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:06)">6s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:05)">5s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:04)">4s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:03)">3s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:02)">2s</value>
+		<value condition="!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize(hh:mm:ss),00:00:01)">1s</value>
+		<value condition="SubString(Player.SeekOffset,00:01,right)">1s</value>
+		<value condition="SubString(Player.SeekOffset,00:02,right)">2s</value>
+		<value condition="SubString(Player.SeekOffset,00:03,right)">3s</value>
+		<value condition="SubString(Player.SeekOffset,00:04,right)">4s</value>
+		<value condition="SubString(Player.SeekOffset,00:05,right)">5s</value>
+		<value condition="SubString(Player.SeekOffset,00:06,right)">6s</value>
+		<value condition="SubString(Player.SeekOffset,00:07,right)">7s</value>
+		<value condition="SubString(Player.SeekOffset,00:08,right)">8s</value>
+		<value condition="SubString(Player.SeekOffset,00:09,right)">9s</value>
+		<value condition="SubString(Player.SeekOffset,00:10,right)">10s</value>
+		<value condition="SubString(Player.SeekOffset,00:11,right)">11s</value>
+		<value condition="SubString(Player.SeekOffset,00:12,right)">12s</value>
+		<value condition="SubString(Player.SeekOffset,00:13,right)">13s</value>
+		<value condition="SubString(Player.SeekOffset,00:14,right)">14s</value>
+		<value condition="SubString(Player.SeekOffset,00:15,right)">15s</value>
+		<value condition="SubString(Player.SeekOffset,00:16,right)">16s</value>
+		<value condition="SubString(Player.SeekOffset,00:17,right)">17s</value>
+		<value condition="SubString(Player.SeekOffset,00:18,right)">18s</value>
+		<value condition="SubString(Player.SeekOffset,00:19,right)">19s</value>
+		<value condition="SubString(Player.SeekOffset,00:20,right)">20s</value>
+		<value condition="SubString(Player.SeekOffset,00:21,right)">21s</value>
+		<value condition="SubString(Player.SeekOffset,00:22,right)">22s</value>
+		<value condition="SubString(Player.SeekOffset,00:23,right)">23s</value>
+		<value condition="SubString(Player.SeekOffset,00:24,right)">24s</value>
+		<value condition="SubString(Player.SeekOffset,00:25,right)">25s</value>
+		<value condition="SubString(Player.SeekOffset,00:26,right)">26s</value>
+		<value condition="SubString(Player.SeekOffset,00:27,right)">27s</value>
+		<value condition="SubString(Player.SeekOffset,00:28,right)">28s</value>
+		<value condition="SubString(Player.SeekOffset,00:29,right)">29s</value>
+		<value condition="SubString(Player.SeekOffset,00:30,right)">30s</value>
+		<value condition="SubString(Player.SeekOffset,00:31,right)">31s</value>
+		<value condition="SubString(Player.SeekOffset,00:32,right)">32s</value>
+		<value condition="SubString(Player.SeekOffset,00:33,right)">33s</value>
+		<value condition="SubString(Player.SeekOffset,00:34,right)">34s</value>
+		<value condition="SubString(Player.SeekOffset,00:35,right)">35s</value>
+		<value condition="SubString(Player.SeekOffset,00:36,right)">36s</value>
+		<value condition="SubString(Player.SeekOffset,00:37,right)">37s</value>
+		<value condition="SubString(Player.SeekOffset,00:38,right)">38s</value>
+		<value condition="SubString(Player.SeekOffset,00:39,right)">39s</value>
+		<value condition="SubString(Player.SeekOffset,00:40,right)">40s</value>
+		<value condition="SubString(Player.SeekOffset,00:41,right)">41s</value>
+		<value condition="SubString(Player.SeekOffset,00:42,right)">42s</value>
+		<value condition="SubString(Player.SeekOffset,00:43,right)">43s</value>
+		<value condition="SubString(Player.SeekOffset,00:44,right)">44s</value>
+		<value condition="SubString(Player.SeekOffset,00:45,right)">45s</value>
+		<value condition="SubString(Player.SeekOffset,00:46,right)">46s</value>
+		<value condition="SubString(Player.SeekOffset,00:47,right)">47s</value>
+		<value condition="SubString(Player.SeekOffset,00:48,right)">48s</value>
+		<value condition="SubString(Player.SeekOffset,00:49,right)">49s</value>
+		<value condition="SubString(Player.SeekOffset,00:50,right)">50s</value>
+		<value condition="SubString(Player.SeekOffset,00:51,right)">51s</value>
+		<value condition="SubString(Player.SeekOffset,00:52,right)">52s</value>
+		<value condition="SubString(Player.SeekOffset,00:53,right)">53s</value>
+		<value condition="SubString(Player.SeekOffset,00:54,right)">54s</value>
+		<value condition="SubString(Player.SeekOffset,00:55,right)">55s</value>
+		<value condition="SubString(Player.SeekOffset,00:56,right)">56s</value>
+		<value condition="SubString(Player.SeekOffset,00:57,right)">57s</value>
+		<value condition="SubString(Player.SeekOffset,00:58,right)">58s</value>
+		<value condition="SubString(Player.SeekOffset,00:59,right)">59s</value>
+		<value condition="SubString(Player.SeekOffset,01:)">1m</value>
+		<value condition="SubString(Player.SeekOffset,02:)">2m</value>
+		<value condition="SubString(Player.SeekOffset,03:)">3m</value>
+		<value condition="SubString(Player.SeekOffset,04:)">4m</value>
+		<value condition="SubString(Player.SeekOffset,05:)">5m</value>
+		<value condition="SubString(Player.SeekOffset,06:)">6m</value>
+		<value condition="SubString(Player.SeekOffset,07:)">7m</value>
+		<value condition="SubString(Player.SeekOffset,08:)">8m</value>
+		<value condition="SubString(Player.SeekOffset,09:)">9m</value>
+		<value condition="SubString(Player.SeekOffset,10:)">10m</value>
+		<value condition="SubString(Player.SeekOffset,11:)">11m</value>
+		<value condition="SubString(Player.SeekOffset,12:)">12m</value>
+		<value condition="SubString(Player.SeekOffset,13:)">13m</value>
+		<value condition="SubString(Player.SeekOffset,14:)">14m</value>
+		<value condition="SubString(Player.SeekOffset,15:)">15m</value>
+		<value condition="SubString(Player.SeekOffset,16:)">16m</value>
+		<value condition="SubString(Player.SeekOffset,17:)">17m</value>
+		<value condition="SubString(Player.SeekOffset,18:)">18m</value>
+		<value condition="SubString(Player.SeekOffset,19:)">19m</value>
+		<value condition="SubString(Player.SeekOffset,20:)">20m</value>
+		<value condition="SubString(Player.SeekOffset,21:)">21m</value>
+		<value condition="SubString(Player.SeekOffset,22:)">22m</value>
+		<value condition="SubString(Player.SeekOffset,23:)">23m</value>
+		<value condition="SubString(Player.SeekOffset,24:)">24m</value>
+		<value condition="SubString(Player.SeekOffset,25:)">25m</value>
+		<value condition="SubString(Player.SeekOffset,26:)">26m</value>
+		<value condition="SubString(Player.SeekOffset,27:)">27m</value>
+		<value condition="SubString(Player.SeekOffset,28:)">28m</value>
+		<value condition="SubString(Player.SeekOffset,29:)">29m</value>
+		<value condition="SubString(Player.SeekOffset,30:)">30m</value>
+		<value condition="SubString(Player.SeekOffset,31:)">31m</value>
+		<value condition="SubString(Player.SeekOffset,32:)">32m</value>
+		<value condition="SubString(Player.SeekOffset,33:)">33m</value>
+		<value condition="SubString(Player.SeekOffset,34:)">34m</value>
+		<value condition="SubString(Player.SeekOffset,35:)">35m</value>
+		<value condition="SubString(Player.SeekOffset,36:)">36m</value>
+		<value condition="SubString(Player.SeekOffset,37:)">37m</value>
+		<value condition="SubString(Player.SeekOffset,38:)">38m</value>
+		<value condition="SubString(Player.SeekOffset,39:)">39m</value>
+		<value condition="SubString(Player.SeekOffset,40:)">40m</value>
+		<value condition="SubString(Player.SeekOffset,41:)">41m</value>
+		<value condition="SubString(Player.SeekOffset,42:)">42m</value>
+		<value condition="SubString(Player.SeekOffset,43:)">43m</value>
+		<value condition="SubString(Player.SeekOffset,44:)">44m</value>
+		<value condition="SubString(Player.SeekOffset,45:)">45m</value>
+		<value condition="SubString(Player.SeekOffset,46:)">46m</value>
+		<value condition="SubString(Player.SeekOffset,47:)">47m</value>
+		<value condition="SubString(Player.SeekOffset,48:)">48m</value>
+		<value condition="SubString(Player.SeekOffset,49:)">49m</value>
+		<value condition="SubString(Player.SeekOffset,50:)">50m</value>
+		<value condition="SubString(Player.SeekOffset,51:)">51m</value>
+		<value condition="SubString(Player.SeekOffset,52:)">52m</value>
+		<value condition="SubString(Player.SeekOffset,53:)">53m</value>
+		<value condition="SubString(Player.SeekOffset,54:)">54m</value>
+		<value condition="SubString(Player.SeekOffset,55:)">55m</value>
+		<value condition="SubString(Player.SeekOffset,56:)">56m</value>
+		<value condition="SubString(Player.SeekOffset,57:)">57m</value>
+		<value condition="SubString(Player.SeekOffset,58:)">58m</value>
+		<value condition="SubString(Player.SeekOffset,59:)">59m</value>
+	</variable>
+	<variable name="SeekStepIcon">
+		<value condition="[!IsEmpty(Player.SeekOffset) + !SubString(Player.SeekOffset,-)] | [!IsEmpty(Player.SeekStepSize) + !SubString(Player.SeekStepSize,-)]">osd/step_forward.png</value>
+		<value condition="[!IsEmpty(Player.SeekOffset) + SubString(Player.SeekOffset,-)] | [!IsEmpty(Player.SeekStepSize) + SubString(Player.SeekStepSize,-)]">osd/step_back.png</value>
+	</variable>	
+    <variable name="LivetvLabel" description="Label for Home menu LiveTV function item">
+        <value condition="StringCompare(Skin.String(livetv),tvchannels)">$LOCALIZE[31059] $LOCALIZE[31085]</value> <!-- TV CHANNELS-->
+        <value condition="StringCompare(Skin.String(livetv),epgguide)">$LOCALIZE[31059] $LOCALIZE[19069]</value> <!-- GUIDE-->
+		<value condition="![StringCompare(Skin.String(livetv),epgguide) | StringCompare(Skin.String(livetv),tvchannels)]">$LOCALIZE[31059]</value> <!--LIVETV-->
+    </variable>
+	
+    <variable name="LivetvStatus" description="Label for skin settings LiveTV function item">	
+        <value condition="StringCompare(Skin.String(livetv),tvchannels)">$LOCALIZE[19023]</value> <!-- TV CHANNELS-->
+        <value condition="StringCompare(Skin.String(livetv),epgguide)">$LOCALIZE[19069]</value> <!-- GUIDE-->	
+		<value condition="![StringCompare(Skin.String(livetv),epgguide) | StringCompare(Skin.String(livetv),tvchannels)]">$LOCALIZE[33061]</value> <!--MENU-->
+	</variable>
+	
+    <variable name="LivetvIcon" description="Label for skin settings LiveTV function item">
+        <value condition="StringCompare(Skin.String(livetv),tvchannels)">special://skin/icons/LiveTV.png</value> <!-- TV CHANNELS-->
+        <value condition="StringCompare(Skin.String(livetv),epgguide)">special://skin/icons/EPG.png</value> <!-- GUIDE-->
+		<value>special://skin/icons/LiveTV.png</value> <!--LIVETV-->
+    </variable>	
+	
+    <variable name="CustomImgStatus">
+        <value condition="Skin.HasSetting(CustomImage)">$LOCALIZE[16041]</value>
+        <value>$LOCALIZE[16039]</value>
+    </variable>
+	
+    <variable name="ShelfLogo">
+        <!--todo fix the holidays!!!!!!!!!-->
+        <value condition="System.Date(01-01,01-02)">holidays/newyear.png</value>
+        <value condition="System.Date(03-17,03-18)">holidays/stpatrick.png</value>
+        <value condition="System.Date(04-15,04-16)">holidays/leonardo.png</value>
+        <!--<value condition="System.Date(05-12,05-13)">holidays/mother.png</value>-->
+        <!--<value condition="System.Date(06-16,06-17)">holidays/father.png</value>-->
+        <value condition="System.Date(10-31,11-01)">holidays/halloween.png</value>
+        <value condition="System.Date(12-25,12-26)">holidays/xmas.png</value>
+        <!--<value condition="System.Date(01-14,01-15)">images/davegrohl.png</value>-->
+        <value condition="Skin.HasSetting(CustomImage)">$INFO[Skin.String(ShelfCustomImage)]</value>
+        <!--<value>images/XBMCHomeLogo.png</value>-->
+        <value>$INFO[Window(Weather).Property(Current.ConditionIcon)]</value>
+    </variable>
+	
+    <variable name="colormenu" description="Colormenu">
+        <value condition="!Skin.HasSetting(colormenu)">$LOCALIZE[16041]</value>
+        <value>$LOCALIZE[16039]</value>
+    </variable>
+	
+    <variable name="Fanartdisplaystatus" description="Label2 for music playing FA">
+        <value condition="Skin.HasSetting(MusicPlayingFanart)">$LOCALIZE[449]</value>
+        <value>$LOCALIZE[13113]</value>
+    </variable>
+	
+    <variable name="WatchStatus" description="status">
+        <value condition="ListItem.IsResumable">$INFO[ListItem.Overlay,overlay/]</value>
+        <value>$INFO[ListItem.Overlay]</value>
+    </variable>
+	
+    <variable name="RootLabel" description="Windows Name and Items details">
+        <value condition="Container.content(movies) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20342]</value>
+        <value condition="Container.content(tvshows) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20343]</value>
+        <value condition="Container.content(musicvideos) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20389]</value>
+        <value condition="Window.IsActive(SkinSettings.xml)">$LOCALIZE[5] - tvOS-X</value>
+        <value condition="Window.IsActive(Settings.xml)">$LOCALIZE[5]</value>
+        <value condition="Window.IsActive(AddonBrowser.xml) + IsEmpty(Container.FolderName)">$LOCALIZE[31037]</value>
+        <value condition="Window.IsActive(MyVideoPlaylist.xml)">$LOCALIZE[20012]</value>
+        <value condition="Window.IsActive(MyMusicPlaylist.xml)">$LOCALIZE[20011]</value>
+        <value condition="Window.IsActive(DialogVideoInfo.xml)">$LOCALIZE[20159]</value>
+        <value condition="Window.IsActive(DialogAlbumInfo.xml) + container.content(albums)">$LOCALIZE[13351]</value>
+        <value condition="Window.IsActive(DialogAlbumInfo.xml) + container.content(artists)">$LOCALIZE[21891]</value>
+        <value condition="Window.IsActive(DialogSongInfo.xml) + container.content(songs)">$LOCALIZE[658]</value>
+        <value condition="Window.IsActive(DialogAddonInfo.xml)">$LOCALIZE[24003]</value>
+        <value condition="Window.IsActive(weather)">$INFO[Window(Weather)]</value>
+        <value condition="Window.IsActive(MyPics.xml)">$LOCALIZE[1]</value>
+        <value condition="Window.IsActive(MyPVR.xml) + [Control.HasFocus(13) | Control.HasFocus(34) | Control.HasFocus(14) | Control.HasFocus(35) | Control.HasFocus(17) | Control.HasFocus(36)]">$INFO[Control.GetLabel(29)]</value>
+        <value condition="Window.IsActive(MyPVR.xml)">$INFO[Control.GetLabel(30)]</value>
+        <value>$INFO[Container.FolderName]</value>
+    </variable>
+	
+    <variable name="TopLabel" description="Infos">
+        <value condition="!Container.content(Addons) + Window.IsActive(MyPics.xml)">$INFO[ListItem.Date,, • ]$INFO[ListItem.Size]</value>
+        <value condition="Container.content(Albums)">$INFO[ListItem.Label]</value>
+        <value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
+        <value condition="Container.Content(Addons)">$INFO[ListItem.Property(Addon.Creator),  ]</value>
+        <value condition="Container.Content(songs)">$INFO[ListItem.Album]</value>
+        <value condition="Container.Content(MusicVideos)">$INFO[ListItem.Label]</value>
+        <value condition="Container.Content(Movies) + ListItem.IsCollection">$INFO[ListItem.Year]</value>
+        <value condition="Container.Content(Movies) + IsEmpty(ListItem.Trailer)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31038]]$VAR[MPAAS, • ]</value>
+        <value condition="Container.Content(Movies) + !IsEmpty(ListItem.Trailer)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31038]] • $LOCALIZE[20410, • ]$VAR[MPAAS, • ]</value>
+        <value condition="Container.Content(Seasons) | Container.Content(TVShows)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]$INFO[ListItem.MPAA, • ]</value>
+        <value>$INFO[ListItem.Label2]</value>
+    </variable>
+	
+    <variable name="MPAAS">
+        <value condition="substring(ListItem.MPAA,TV)">$INFO[ListItem.MPAA]</value>
+        <value condition="substring(ListItem.MPAA,PG-13)">PG-13</value>
+        <value condition="substring(ListItem.MPAA,Rated R)">R</value>
+        <value condition="substring(ListItem.MPAA,PG)">PG</value>
+        <value condition="substring(ListItem.MPAA,NC-17)">NC-17</value>
+        <value condition="substring(ListItem.MPAA,G)">G</value>
+        <value>NA</value>
+    </variable>
+	
+    <variable name="Plots">
+        <value condition="Container.content(addons) + !IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
+        <value condition="SubString(ListItem.IsCollection)">$LOCALIZE[20457]</value>
+        <value condition="[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Episodes)] + !IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+        <value condition="Container.Content(Seasons) + !IsEmpty(Container.ShowPlot)">$INFO[Container.ShowPlot]</value>
+        <value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+        <value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
+        <value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+    </variable>
+	
+    <variable name="pvrosd" description="pvrOSDchoiche">
+        <value condition="Skin.HasSetting(osdch)">$LOCALIZE[19069]</value>
+        <value >$LOCALIZE[19019]</value>
+    </variable>
+	
+    <variable name="helptext">
+        <value condition="Container(50).HasFocus(1)">$LOCALIZE[31008]</value>
+        <value condition="Container(50).HasFocus(2)">$LOCALIZE[31018]</value>
+        <value condition="Container(50).HasFocus(3)">$LOCALIZE[31017]</value>
+        <value condition="Container(50).HasFocus(4)">$LOCALIZE[21383]</value>
+        <value condition="Container(50).HasFocus(5)">$LOCALIZE[31054]</value>
+        <value condition="Container(50).HasFocus(6)">$LOCALIZE[31058]</value>
+        <value condition="Container(50).HasFocus(8)">$LOCALIZE[31046]</value>
+        <value condition="Container(50).HasFocus(9)">$LOCALIZE[31022]</value>
+        <value condition="Container(50).HasFocus(11)">$LOCALIZE[31019]</value>		
+        <value condition="Container(50).HasFocus(12)">   $LOCALIZE[31036] **YOU WILL LOSE ALL SKIN SETTINGS**</value>		
+        <value condition="Container(50).HasFocus(13)">$LOCALIZE[31020]</value>
+        <value condition="Container(50).HasFocus(14)">$LOCALIZE[31003]</value>
+        <value condition="Container(50).HasFocus(15)">$LOCALIZE[31029]</value>
+        <value condition="Container(50).HasFocus(16)">$LOCALIZE[31031]</value>
+        <value condition="Container(50).HasFocus(17)">$LOCALIZE[31068]</value>
+		<value condition="Container(50).HasFocus(18)">$LOCALIZE[31070]</value>
+		<value condition="Container(50).HasFocus(19)">$LOCALIZE[31072]</value>
+		<value condition="Container(50).HasFocus(20)">$LOCALIZE[31073]</value>
+		<value condition="Container(50).HasFocus(21)">$LOCALIZE[31074]</value>
+		<value condition="Container(50).HasFocus(22)">$LOCALIZE[31077]</value>
+		<value condition="Container(50).HasFocus(23)">$LOCALIZE[31078]</value>
+		<value condition="Container(50).HasFocus(24)">$LOCALIZE[31079]</value>
+		<value condition="Container(50).HasFocus(25)">$LOCALIZE[31082]</value>		
+    </variable>
+	
+    <variable name="nowplay">
+        <value condition="Pvr.IsPlayingTV">$INFO[]</value>
+        <value condition="IsEmpty(Player.Art(tvshow.poster))">$INFO[VideoPlayer.Cover]</value>
+        <value>$INFO[Player.Art(tvshow.poster)]</value>
+    </variable>
+	
+    <variable name="Locandine">
+        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+        <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+        <value>$INFO[ListItem.Icon]</value>
+    </variable>
+    <variable name="Locandine_thumb">
+        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.thumb)]</value>
+        <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ ListItem.Art(thumb)]</value>
+        <value>$INFO[ListItem.Icon]</value>
+    </variable>	
+    <variable name="fanart">
+        <!--value condition="IsEmpty(ListItem.Art(fanart)) | Container.Content(Albums) | Container.Content(episodes)">$INFO[ListItem.Icon]</value-->
+        <value condition="Skin.HasSetting(Fanart)">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!Skin.HasSetting(Fanart) | IsEmpty(ListItem.Art(fanart))">$VAR[OtherBG]</value>
+    </variable>	
+
+    <variable name="dvdbox">
+        <value condition="ListItem.IsStereoscopic">images/dvdbox3d.png</value>
+        <value>images/dvdbox.png</value>
+    </variable>
+
+    <variable name="shelfmovies">
+        <value condition="Container(9000).HasFocus(340) + StringCompare(Skin.String(moviesshelf),WL)">special://skin/resources/laststarted.xsp</value>
+        <value condition="Container(9000).HasFocus(340) + StringCompare(Skin.String(moviesshelf),RND)">special://skin/resources/random.xsp</value>
+        <value condition="Container(9000).HasFocus(340)">videodb://recentlyaddedmovies/</value>
+		<value condition="Container(9000).HasFocus(621)">$INFO[Skin.String(HomeFav.101.List)]</value>
+        <value condition="Container(9000).HasFocus(622)">$INFO[Skin.String(HomeFav.102.List)]</value>
+		<value condition="Container(9000).HasFocus(623)">$INFO[Skin.String(HomeFav.103.List)]</value>
+        <value condition="Container(9000).HasFocus(624)">$INFO[Skin.String(HomeFav.104.List)]</value>
+		<value condition="Container(9000).HasFocus(625)">$INFO[Skin.String(HomeFav.105.List)]</value>
+        <value>-</value>
+    </variable>
+
+    <variable name="shelfTV">
+        <value condition="Skin.HasSetting(TVShelf_Watchlist)">videodb://recentlyaddedepisodes/</value>
+        <value>plugin://service.library.data.provider?type=recommendedepisodes&amp;limit=18&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
+    </variable>
+
+    <variable name="shelflabel">
+        <!--MOVIES-->
+        <value condition="Container(9000).HasFocus(340) + StringCompare(Skin.String(moviesshelf),WL)">$LOCALIZE[31048]</value>
+        <value condition="Container(9000).HasFocus(340) + StringCompare(Skin.String(moviesshelf),RND)">$LOCALIZE[590]</value>
+        <value condition="Container(9000).HasFocus(340) + StringCompare(Skin.String(moviesshelf),)">$LOCALIZE[20386]</value>
+        <!--TV-->
+        <value condition="Container(9000).HasFocus(341) + Skin.HasSetting(TVShelf_Watchlist)">$LOCALIZE[20387]</value>
+        <value condition="Container(9000).HasFocus(341)">$LOCALIZE[31048]</value>
+        <!--MUSIC-->
+        <value condition="Container(9000).HasFocus(342)">$LOCALIZE[359]</value>
+        <!--ADDONS-->
+        <value condition="Container(9000).HasFocus(343) + Control.IsVisible(315)">$INFO[Container(315).ListItem.Property(ItemType)]</value>
+        <!--PICTURES-->
+        <value condition="Container(9000).HasFocus(344)"> </value>
+        <!--LIVETV(RECORDINGS)-->
+        <value condition="Container(9000).HasFocus(355)"> </value>
+        <!--GENERAL-->
+        <value> </value>
+		<!--SHELF FAVOURITES-->
+		<value condition="Container(9000).HasFocus(621)">$INFO[Skin.String(HomeFav.101.Label)]</value>	
+		<value condition="Container(9000).HasFocus(622)">$INFO[Skin.String(HomeFav.102.Label)]</value>
+		<value condition="Container(9000).HasFocus(623)">$INFO[Skin.String(HomeFav.103.Label)]</value>
+		<value condition="Container(9000).HasFocus(624)">$INFO[Skin.String(HomeFav.104.Label)]</value>
+		<value condition="Container(9000).HasFocus(625)">$INFO[Skin.String(HomeFav.105.Label)]</value>		
+    </variable>
+
+    <variable name="audiochannels">
+        <value condition="StringCompare(ListItem.AudioChannels,8)">7.1</value>
+        <value condition="StringCompare(ListItem.AudioChannels,6)">5.1</value>
+        <value condition="StringCompare(ListItem.AudioChannels,5)">4.1</value>
+        <value condition="StringCompare(ListItem.AudioChannels,3)">2.1</value>
+        <value condition="StringCompare(ListItem.AudioChannels,2)">STEREO</value>
+        <value>$INFO[ListItem.AudioChannels]</value>
+    </variable>
+</includes>

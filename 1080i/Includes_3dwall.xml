@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="DialogZoomInOutAnimation">
+		<animation type="Conditional" reversible="false" condition="
+		Window.IsActive(1110)
+    | Window.IsActive(favourites)
+		| Window.IsActive(PVRGuideInfo) 
+		| Window.IsActive(PVRRecordingInfo) 
+		| Window.IsActive(PVRTimerSetting) 
+		| Window.IsActive(PVRGuideSearch) 
+		| Window.IsActive(PVRChannelManager) 
+		| Window.IsActive(PVRGroupManager) 
+		| Window.IsActive(ShutdownMenu)
+		| Window.IsActive(SelectDialog) 
+		| Window.IsActive(DialogSelect.xml) 
+		| Window.IsActive(MovieInformation) 
+		| Window.IsActive(MusicInformation) 
+		| Window.IsActive(SongInformation) 
+		| Window.IsActive(AddonInformation) 
+		| Window.IsActive(FileBrowser) 
+		| Window.IsActive(TextViewer) 
+		| Window.IsActive(AddonSettings) 
+		| Window.IsActive(ContentSettings)
+		| Window.IsActive(MediaSource) 
+		| Window.IsActive(PictureInfo) 
+		| Window.IsActive(ProfileSettings) 
+		| Window.IsActive(LockSettings) 
+		| Window.IsActive(SmartPlaylistEditor) 
+		| Window.IsActive(Peripherals) 
+		| Window.IsActive(PeripheralSettings)
+		| Window.IsActive(SmartPlaylistRule)
+		| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
+		| Window.IsActive(script-globalsearch-infodialog.xml) 
+		| Window.IsActive(script-XBMC_Lyrics-settings.xml) 
+		| Window.IsActive(script-RSS_Editor-rssEditor.xml) 
+		| Window.IsActive(script-RSS_Editor-setEditor.xml)">
+      <effect type="fade" start="100" end="0" time="200" delay="0" tween="sine" easing="inout" />
+      <effect type="zoom" start="100" end="90" time="200" delay="0" center="640,360" tween="sine" easing="inout" />
+		</animation>
+		<animation type="Conditional" reversible="false" condition="
+		!Window.IsActive(1110)
+    + !Window.IsActive(favourites)
+		+ !Window.IsActive(PVRGuideInfo) 
+		+ !Window.IsActive(PVRRecordingInfo) 
+		+ !Window.IsActive(PVRTimerSetting) 
+		+ !Window.IsActive(PVRGuideSearch) 
+		+ !Window.IsActive(PVRChannelManager) 
+		+ !Window.IsActive(PVRGroupManager)
+		+ !Window.IsActive(ShutdownMenu)
+		+ !Window.IsActive(SelectDialog)  
+		+ !Window.IsActive(DialogSelect.xml)
+		+ !Window.IsActive(MovieInformation) 
+		+ !Window.IsActive(MusicInformation) 
+		+ !Window.IsActive(SongInformation) 
+		+ !Window.IsActive(AddonInformation) 
+		+ !Window.IsActive(FileBrowser) 
+		+ !Window.IsActive(TextViewer) 
+		+ !Window.IsActive(AddonSettings) 
+		+ !Window.IsActive(ContentSettings)
+		+ !Window.IsActive(MediaSource) 
+		+ !Window.IsActive(PictureInfo) 
+		+ !Window.IsActive(ProfileSettings) 
+		+ !Window.IsActive(LockSettings) 
+		+ !Window.IsActive(SmartPlaylistEditor) 
+		+ !Window.IsActive(SmartPlaylistRule) 
+		+ !Window.IsActive(Peripherals) 
+		+ !Window.IsActive(PeripheralSettings)
+		+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
+		+ !Window.IsActive(script-globalsearch-infodialog.xml) 
+		+ !Window.IsActive(script-XBMC_Lyrics-settings.xml) 
+		+ !Window.IsActive(script-RSS_Editor-rssEditor.xml) 
+		+ !Window.IsActive(script-RSS_Editor-setEditor.xml)">
+      <effect type="zoom" start="90" end="100" time="200" delay="0" center="640,360" tween="sine" easing="inout" />
+      <effect type="fade" start="0" end="100" time="200" delay="0" tween="sine" easing="inout" />
+		</animation>
+	</include>
+
+	<include name="DialogFadeInOutAnimation">
+		<animation type="Conditional" reversible="false" condition="
+		Window.IsActive(1110)
+    | Window.IsActive(favourites)
+		| Window.IsActive(shutdownmenu)
+		| Window.IsActive(MovieInformation) 
+		| Window.IsActive(MusicInformation) 
+		| Window.IsActive(SongInformation) 
+		| Window.IsActive(AddonInformation) 
+		| Window.IsActive(FileBrowser) 
+		| Window.IsActive(TextViewer) 
+		| Window.IsActive(AddonSettings) 
+		| Window.IsActive(ContentSettings) 
+		| Window.IsActive(DialogSelect.xml) 
+		| Window.IsActive(SelectDialog)
+		| Window.IsActive(MediaSource) 
+		| Window.IsActive(PictureInfo) 
+		| Window.IsActive(ProfileSettings) 
+		| Window.IsActive(LockSettings) 
+		| Window.IsActive(SmartPlaylistEditor) 
+		| Window.IsActive(SmartPlaylistRule) 
+		| Window.IsActive(Peripherals) 
+		| Window.IsActive(PeripheralSettings) 
+		| Window.IsActive(FileManager) 
+		| Window.IsActive(musicplaylisteditor)
+		| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
+		| Window.IsActive(script-XBMC_Lyrics-settings.xml) 
+		| Window.IsActive(script-RSS_Editor-rssEditor.xml) 
+		| Window.IsActive(script-RSS_Editor-setEditor.xml)">
+      <effect type="fade" start="100" end="0" time="200" delay="100" tween="sine" easing="inout"/>
+		</animation>
+		<animation type="Conditional" reversible="false" condition="
+		!Window.IsActive(1110)
+    + !Window.IsActive(favourites)
+		+ !Window.IsActive(shutdownmenu)
+		+ !Window.IsActive(MovieInformation) 
+		+ !Window.IsActive(MusicInformation) 
+		+ !Window.IsActive(SongInformation) 
+		+ !Window.IsActive(AddonInformation) 
+		+ !Window.IsActive(FileBrowser) 
+		+ !Window.IsActive(TextViewer) 
+		+ !Window.IsActive(AddonSettings) 
+		+ !Window.IsActive(ContentSettings) 
+		+ !Window.IsActive(DialogSelect.xml) 
+		+ !Window.IsActive(SelectDialog)
+		+ !Window.IsActive(MediaSource) 
+		+ !Window.IsActive(PictureInfo) 
+		+ !Window.IsActive(ProfileSettings) 
+		+ !Window.IsActive(LockSettings) 
+		+ !Window.IsActive(SmartPlaylistEditor) 
+		+ !Window.IsActive(SmartPlaylistRule)
+		+ !Window.IsActive(Peripherals) 
+		+ !Window.IsActive(PeripheralSettings) 
+		+ !Window.IsActive(FileManager) 
+		+ !Window.IsActive(musicplaylisteditor)
+		+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
+		+ !Window.IsActive(script-XBMC_Lyrics-settings.xml)
+		+ !Window.IsActive(script-RSS_Editor-rssEditor.xml) 
+		+ !Window.IsActive(script-RSS_Editor-setEditor.xml)">
+      <effect type="fade" start="0" end="100" time="200" tween="sine" easing="out"/>
+		</animation>
+	</include>
+
+	<constant name="FanartCrossfadeTime">200</constant>
+		
+  <!-- OnNext -->
+	<include name="Includes_OnNext_3DWall">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-14).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2684</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(0).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2684</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(14).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(14).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(15).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(15).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(16).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(16).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(17).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(17).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(18).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(18).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2684</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(19).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2684</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(19).Icon]</texture>
+		</control>
+	</include>
+
+  <!-- OnPrevious -->
+	<include name="Includes_OnPrevious_3DWall">
+		<control type="image">
+			<left>-244</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>-244</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(0).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>-244</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>-244</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(14).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(14).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(15).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(15).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(16).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(16).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(17).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(17).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(18).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(18).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(19).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(19).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(20).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(20).Icon]</texture>
+		</control>
+	</include>
+
+  <!-- Static -->
+	<include name="Includes_Static_3DWall">
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-8).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>0</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-3).Icon]</texture>
+		</control>
+		
+		<control type="image">
+			<left>0</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(-1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(0).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(1).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(2).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(3).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(4).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(5).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(6).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(7).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>360</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(8).Icon]</texture>
+		</control>
+
+		<control type="image">
+			<left>0</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(9).Icon]</texture>
+		</control>				
+		<control type="image">
+			<left>0</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(9).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>244</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(10).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>488</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(11).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>732</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(12).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>976</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(13).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(14).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1220</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(14).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(15).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1464</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(15).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(16).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1708</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(16).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(17).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>1952</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(17).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(18).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2196</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(18).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>720</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="images/DiffuseMovie.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(19).Icon]</texture>
+		</control>
+		<control type="image">
+			<left>2440</left>
+			<top>723</top>
+			<width>244</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture flipy="true" diffuse="images/DiffuseMovieReflection.png" background="true" fallback="DefaultVideoCover.png">$INFO[ListItem(19).Icon]</texture>
+		</control>
+	</include>	
+	
+</includes>

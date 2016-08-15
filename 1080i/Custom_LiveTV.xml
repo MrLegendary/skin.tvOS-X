@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1116">
+  <defaultcontrol always="true">9000</defaultcontrol>
+  <include>DialogOpenClose</include>
+  <controls>
+    <control type="group" description="back">
+      <control type="image">
+        <centerleft>960</centerleft>
+        <centertop>566</centertop>
+        <width>783</width>
+        <height>522</height>
+        <texture border="50">images/ContextMenu.png</texture>
+      </control>
+      <control type="group">
+        <left>697</left>
+		<top>320</top>
+        <control type="grouplist" id="9000">
+          <width>525</width>
+          <height>500</height>
+          <align>center</align>
+          <onleft>noop</onleft>
+          <onright>noop</onright>
+          <onup>9000</onup>
+          <ondown>9000</ondown>
+          <itemgap>8</itemgap>
+          <font>size33</font>
+          <scrolltime>260</scrolltime>
+          <defaultcontrol always="true">701</defaultcontrol>
+          <control type="label" description="Dialog heading">
+            <width>525</width>
+            <height>112</height>
+            <label>$LOCALIZE[31084]</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>size36</font>
+			<textcolor>textcolor2</textcolor>
+          </control>	  
+          <control type="radiobutton" id="701" description="Choose from Menu">
+            <width>525</width>
+            <label>31050</label>
+            <onclick>Skin.Reset(livetv)</onclick>
+            <onclick>Skin.Reset(livetvmenu)</onclick>
+            <onclick>Close</onclick>
+            <selected>IsEmpty(Skin.String(livetv))</selected>
+          </control>		  
+          <control type="radiobutton" id="702" description="TV Channels">
+            <width>525</width>
+            <label>19023</label>
+            <onclick>Skin.SetString(livetv,tvchannels)</onclick>
+            <onclick condition="!Skin.HasSetting(livetvmenu)">Skin.ToggleSetting(livetvmenu)</onclick>
+            <onclick>Close</onclick>
+            <selected>StringCompare(Skin.String(livetv),tvchannels)</selected>
+          </control>
+          <control type="radiobutton" id="703" description="EPG Guide">
+            <width>525</width>
+            <label>19069</label>
+            <onclick>Skin.SetString(livetv,epgguide)</onclick>
+            <onclick condition="!Skin.HasSetting(livetvmenu)">Skin.ToggleSetting(livetvmenu)</onclick>
+            <onclick>Close</onclick>
+            <selected>StringCompare(Skin.String(livetv),epgguide)</selected>
+          </control>  
+          <control type="label" description="Dialog heading">
+            <width>525</width>
+            <height>112</height>
+            <label>$LOCALIZE[31082]</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>size22</font>
+			<textcolor>50details</textcolor>
+          </control>		  	  
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>

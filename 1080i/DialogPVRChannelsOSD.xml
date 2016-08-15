@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">11</defaultcontrol>
+  <controls>
+    <control type="image">
+      <top>310</top>
+      <height>800</height>
+      <width>1920</width>
+	  <include>seekbar_bkgd</include>
+    </control>
+    <control type="group">
+      <description>TV Guide Channel</description>
+	  <top>20</top>
+      <include>VisibleFade</include>
+      <control type="label">
+        <left>80</left>
+        <top>300</top>
+        <height>40</height>
+        <width>500</width>
+		<font>size30B</font>
+        <textcolor>textcolor2</textcolor>
+        <label>$INFO[VideoPlayer.ChannelGroup]</label>
+      </control>
+      <control type="group">
+        <left>80</left>
+        <top>340</top>
+        <control type="label">
+          <description>Date Time label</description>
+          <left>0</left>
+          <top>20</top>
+          <width>220</width>
+          <height>20</height>
+          <font>size26B</font>
+          <textcolor>textcolor2</textcolor>
+          <aligny>center</aligny>
+          <label>21820</label>
+        </control>
+        <control type="label">
+          <description>Channel</description>
+          <left>220</left>
+          <top>20</top>
+          <width>600</width>
+          <height>20</height>
+          <font>size26B</font>
+          <textcolor>textcolor2</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>19029</label>
+        </control>
+        <control type="label">
+          <description>Title</description>
+          <left>740</left>
+          <top>20</top>
+          <width>600</width>
+          <height>20</height>
+          <font>size26B</font>
+          <textcolor>textcolor2</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>369</label>
+        </control>
+        <control type="label">
+          <description>Status header label</description>
+          <right>80</right>
+          <top>20</top>
+          <width>250</width>
+          <height>20</height>
+          <font>Size26B</font>
+          <textcolor>textcolor2</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>126</label>
+        </control>
+        <!--control type="image">
+          <description>separator image</description>
+          <left>60</left>
+          <top>57</top>
+          <width>1760</width>
+          <height>2</height>
+          <texture>images/line.png</texture>
+        </control-->
+        <control type="list" id="11">
+          <left>2</left>
+          <top>60</top>
+          <width>1700</width>
+          <height>480</height>
+          <onup>11</onup>
+          <ondown>11</ondown>
+          <onleft>noop</onleft>
+          <onright condition="!Skin.HasSetting(Scrollbars_Active)">60</onright>
+          <pagecontrol>60</pagecontrol>
+          <scrolltime>200</scrolltime>
+          <itemlayout height="51" width="1700">
+            <control type="image">
+              <width>1700</width>
+              <height>42</height>
+              <!--texture border="5">pstvButtonNoFocus.png</texture>
+              <colordiffuse>90FFFFFF</colordiffuse-->
+			  <include>right_listpanel_unfocused</include>
+            </control>
+            <control type="label">
+              <left>10</left>
+              <width>220</width>
+              <height>40</height>
+              <font>Size26</font>
+              <aligny>center</aligny>
+              <textcolor>textcolor</textcolor>
+              <selectedcolor>red</selectedcolor>
+              <info>ListItem.StartTime</info>
+            </control>
+            <control type="label">
+              <left>220</left>
+              <top>0</top>
+              <width>600</width>
+              <height>40</height>
+              <font>Size26</font>
+              <align>left</align>
+              <aligny>center</aligny>
+              <textcolor>textcolor</textcolor>
+              <selectedcolor>red</selectedcolor>
+              <info>ListItem.Label</info>
+            </control>
+            <control type="label">
+              <left>740</left>
+              <top>0</top>
+              <width>640</width>
+              <height>40</height>
+              <font>Size26</font>
+              <align>left</align>
+              <aligny>center</aligny>
+              <textcolor>textcolor</textcolor>
+              <selectedcolor>red</selectedcolor>
+              <info>ListItem.Title</info>
+            </control>
+            <control type="image">
+              <left>1730</left>
+              <top>6</top>
+              <width>30</width>
+              <height>30</height>
+              <texture>pvr/rec.png</texture>
+              <aspectratio>keep</aspectratio>
+              <visible>ListItem.IsRecording</visible>
+            </control>
+            <control type="label">
+              <left>1510</left>
+              <width>250</width>
+              <height>40</height>
+              <font>Size26</font>
+              <aligny>center</aligny>
+              <textcolor>textcolor</textcolor>
+              <selectedcolor>red</selectedcolor>
+              <label>19043</label>
+              <visible>ListItem.IsRecording</visible>
+            </control>
+            <control type="image">
+              <left>1730</left>
+              <top>6</top>
+              <width>30</width>
+              <height>30</height>
+              <texture>pvr/timer.png</texture>
+              <aspectratio>keep</aspectratio>
+              <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+            </control>
+            <control type="label">
+              <left>1510</left>
+              <width>250</width>
+              <height>40</height>
+              <font>Size26</font>
+              <aligny>center</aligny>
+              <textcolor>textcolor</textcolor>
+              <selectedcolor>red</selectedcolor>
+              <label>19040</label>
+              <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+            </control>
+          </itemlayout>	  
+          <focusedlayout height="130" width="1700">		  
+           <control type="group">		   
+            <animation effect="zoom" time="120" start="100" end="106" center="auto" tween="Back" easing="Out">Focus</animation>
+            <animation condition="Control.HasFocus(60) + !Control.HasFocus(11)" effect="zoom" time="60" start="100" end="106" center="auto" tween="Back" easing="Out">Conditional</animation>
+            <control type="image">
+                <top>12</top>
+                <left>-50</left>
+                <height>120</height>
+                <width>1700</width>
+                <include>right_listpanel_focused_shadow</include>
+            </control>
+            <control type="image">
+                <height>120</height>
+                <width>1700</width>
+               <include>right_listpanel_focused</include>
+            </control>												
+            <control type="label">
+              <left>57</left>
+              <width>220</width>
+              <height>40</height>
+              <font>Size26</font>
+              <aligny>center</aligny>
+              <textcolor>textcolor</textcolor>
+              <selectedcolor>red</selectedcolor>
+              <info>ListItem.StartTime</info>
+            </control>
+            <control type="label">
+              <left>255</left>
+              <width>500</width>
+              <height>40</height>
+              <font>Size26</font>
+              <align>left</align>
+              <aligny>center</aligny>
+              <textcolor>textcolor</textcolor>
+              <selectedcolor>red</selectedcolor>
+              <info>ListItem.Label</info>
+            </control>
+            <control type="label">
+              <left>745</left>
+              <width>740</width>
+              <height>40</height>
+              <font>Size26</font>
+              <align>left</align>
+              <aligny>center</aligny>
+              <textcolor>textcolor</textcolor>
+              <selectedcolor>red</selectedcolor>
+              <info>ListItem.Title</info>
+            </control>
+            <control type="textbox">
+              <description>Plot Value for TVShow</description>
+              <left>60</left>
+              <top>35</top>
+              <width>1600</width>
+              <height>82</height>
+              <font>font12</font>
+              <align>justify</align>
+              <textcolor>textcolor</textcolor>
+              <label>$INFO[ListItem.Plot]</label>
+            </control>
+            <control type="image">
+              <left>1730</left>
+              <top>6</top>
+              <width>30</width>
+              <height>30</height>
+              <texture>pvr/rec.png</texture>
+              <aspectratio>keep</aspectratio>
+              <visible>ListItem.IsRecording</visible>
+            </control>
+            <control type="label">
+              <left>1510</left>
+              <width>250</width>
+              <height>40</height>
+              <font>Size26</font>
+              <aligny>center</aligny>
+              <textcolor>textcolor</textcolor>
+              <selectedcolor>red</selectedcolor>
+              <label>19043</label>
+              <visible>ListItem.IsRecording</visible>
+            </control>
+            <control type="image">
+              <left>1730</left>
+              <top>6</top>
+              <width>30</width>
+              <height>30</height>
+              <texture>pvr/timer.png</texture>
+              <aspectratio>keep</aspectratio>
+              <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+            </control>
+            <control type="label">
+              <left>1510</left>
+              <width>250</width>
+              <height>40</height>
+              <font>Size26</font>
+              <aligny>center</aligny>
+              <textcolor>textcolor</textcolor>
+              <selectedcolor>red</selectedcolor>
+              <label>19040</label>
+              <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+            </control>
+		   </control>
+          </focusedlayout>
+        </control>
+        <control type="scrollbar" id="60">
+          <left>1780</left>
+          <top>60</top>
+          <height>480</height>
+          <onleft>11</onleft>
+          <onright>noop</onright>
+          <showonepage>false</showonepage>
+          <orientation>vertical</orientation>
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>
